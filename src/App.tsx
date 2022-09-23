@@ -1,34 +1,31 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import "./App.css";
+import landingPageImage from "./assets/landing-page-image.png";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
+    <div className="container mx-auto bg-purple-3">
+      <h1 className="mx-auto text-primary font-bold text-4xl">
+        Imagine if
+        <div className="bg-envited-gradient bg-clip-text text-transparent">
+          Snapchat
+        </div>
+        had events.
+      </h1>
+
+      <p className="mt-8 font-light max-w-lg mx-auto">
+        Easily host and share events with your friends across any social media.
       </p>
+
+      <img src={landingPageImage} alt="landing-page" className="mt-9 mx-auto" />
+
+      <button
+        className="bg-envited-gradient text-white mt-8.5 font-bold py-4 px-5.1 rounded-xl max-w-xs"
+        type="button"
+      >
+        🎉 Create my event
+      </button>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
