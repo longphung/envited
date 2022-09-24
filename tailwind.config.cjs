@@ -22,6 +22,7 @@ module.exports = {
         "foreground-red": "#E61445",
         "background-green": "#D3FFE2",
         "foreground-green": "#00805E",
+        "gray-2": "#828282",
       },
       margin: {
         "8.5": "2.125rem",
@@ -35,6 +36,9 @@ module.exports = {
       backgroundImage: {
         "envited-gradient": "linear-gradient(90deg, #8456EC 3.25%, #E87BF8 100%)",
       },
+      boxShadow: {
+        "icons": "0px 0px 5px rgba(0, 0, 0, 0.1)",
+      }
     },
   },
   plugins: [],

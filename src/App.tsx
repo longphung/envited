@@ -1,10 +1,9 @@
 import "./App.css";
-import landingPageImage from "./assets/landing-page-image.png";
-import { Link, Route, Router } from "wouter";
+import { Route } from "wouter";
 import LandingPage from "./pages/landing-page";
 import Create from "./pages/create";
 import Event from "./pages/event";
-import {useState} from "react";
+import { useState } from "react";
 
 export type EventData = {
   eventName: string;
@@ -13,10 +12,10 @@ export type EventData = {
   endTime: Date;
   location: string;
   eventPhoto: FileList;
-}
+} | null;
 
 function App() {
-  const [eventData, setEventData] = useState<EventData | null>(null);
+  const [eventData, setEventData] = useState<EventData>(null);
   return (
     <>
       <Route path="/">
@@ -26,7 +25,7 @@ function App() {
         <Create setEventData={setEventData} />
       </Route>
       <Route path="/event">
-        <Event/>
+        <Event eventData={eventData} />
       </Route>
     </>
   );

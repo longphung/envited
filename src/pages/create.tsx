@@ -4,7 +4,7 @@ import { Link, useLocation } from "wouter";
 import { EventData } from "../App";
 
 type CreateProps = {
-  setEventData: Dispatch<SetStateAction<EventData | null>>;
+  setEventData: Dispatch<SetStateAction<EventData>>;
 };
 
 const Create: React.FC<CreateProps> = (props) => {
@@ -13,7 +13,6 @@ const Create: React.FC<CreateProps> = (props) => {
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    console.log(event.currentTarget.elements);
     // @ts-ignore
     const { eventName, hostName, startTime, endTime, location, eventPhoto } =
       event.currentTarget.elements;
